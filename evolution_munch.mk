@@ -14,6 +14,7 @@ $(call inherit-product, vendor/evolution/config/common.mk)
 # Inherit from alioth device
 $(call inherit-product, device/xiaomi/munch/device.mk)
 
+TARGET_USES_MINI_GAPPS := true
 PRODUCT_NAME := evolution_munch
 PRODUCT_DEVICE := munch
 PRODUCT_MANUFACTURER := Xiaomi
