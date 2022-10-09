@@ -8,13 +8,20 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common lineage stuff.
-$(call inherit-product, vendor/evolution/config/common.mk)
-
-# Inherit from alioth device
+# Inherit from munch device
 $(call inherit-product, device/xiaomi/munch/device.mk)
 
+# Inherit some common Evolution X stuff.
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
+
+# Evolution-X Flags
+EVO_BUILD_TYPE := UNOFFICIAL
 TARGET_USES_MINI_GAPPS := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# Device identifier. This must come after all inclusions.
 PRODUCT_NAME := evolution_munch
 PRODUCT_DEVICE := munch
 PRODUCT_MANUFACTURER := Xiaomi
