@@ -15,7 +15,7 @@ $(call inherit-product, device/xiaomi/munch/device.mk)
 $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
 # Evolution-X Flags
-EVO_BUILD_TYPE := UNOFFICIAL
+EVO_BUILD_TYPE := COMMUNITY
 TARGET_USES_MINI_GAPPS := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
